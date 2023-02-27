@@ -28,3 +28,10 @@ the web interface driven tool in concert with a shared cluster Slurm scheduler.
  2. configuring the container on our cluster
 
  3. accessing the container in a Slurm job usinf an ssh tunnel
+
+## Background material
+
+Several tools are used and general techniques are used to make this system work.
+The notes here contain links to more detailed material on the general use of these
+tools and techniques. These notes focus on the rapid application of the tools to
+a specific case and so some background information is not covered in detail.
