@@ -26,6 +26,8 @@ From this definition we can build a container image that can be used on our Slur
 The definition file, [wspeedi.def](./wspeedi.def), describes what software needs to be 
 installed into the container image.
 
+## Overview of build steps
+
 Once we have a definition file we can use the Singulaity tool to create a container.
 The Singularity workflow is slightly idiosyncratic. In particualr 
 
@@ -39,4 +41,27 @@ any privileged actions will fail.
     provides command options to specify these bindings.
 
 Creating a Singularity container for an existing tool like WSPEEDI requires a little experimentation
-to understand which directories need to be writable when the tool is used. 
+to understand which directories need to be writable when the tool is used. In practice we do this
+by building the container under a prvileged account locally (on a laptop for example) 
+and then iterating with running the container under a non-privileged account and resolving write access
+problems that may arise.
+
+## Commands to build
+
+In the end, building the container amounts to executing a series of commands that utilize
+the tools Vgrant and Singularity and operate on the [wspeedi.def](./wspeedi.def) defintiion 
+file. 
+
+The Vagrant tool is used to provide a linux Virtual Machine that supports root privileges for our
+account. This meets a requirement for building a container, although other approaches a possible.
+The Vagrant web site has details on how to work with Vagrant to run a virtual machine. Here we provide a short
+summary.
+
+#### If needed, download and install Virtual Box and Vagrant
+The websites for these two products have instructions that should be followed. For a MacOS system
+the relevant installation files are
+```
+$ wget https://download.virtualbox.org/virtualbox/7.0.6/VirtualBox-7.0.6-155176-OSX.dmg
+
+```
+
