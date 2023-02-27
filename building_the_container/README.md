@@ -25,3 +25,18 @@ that specifies a virtual configuration for a Singularity container image.
 From this definition we can build a container image that can be used on our Slurm cluster.
 The definition file, [wspeedi.def](./wspeedi.def), describes what software needs to be 
 installed into the container image.
+
+Once we have a definition file we can use the Singulaity tool to create a container.
+The Singularity workflow is slightly idiosyncratic. In particualr 
+
+ 1. we create the
+container on a system where we have root privileges, and then transfer the container
+to our cluster. On the cluster the container is executed under a regular account and
+any privileged actions will fail. 
+
+ 2. once created the container is read-only. Any directories that need to be writable must **bind** to
+    to cluster directories that are writable by the account running the container. Singularity
+    provides command options to specify these bindings.
+
+Creating a Singularity container for an existing tool like WSPEEDI requires a little experimentation
+to understand which directories need to be writable when the tool is used. 
