@@ -1,1 +1,15 @@
 # Building the Singularity container
+
+Building Singulairty containers is a slightly convoluted process. 
+For cases where it is warranted the process is helpful, but
+it does involve a number of steps. 
+
+The process requires using a root privileged session on a Linux systems.
+A common approach is to use the tools, Vagrant and Virtual Box, that
+togethr can provide one systematic recipe for building containers.
+
+Both tools are freely availble downloads for x86 computers. Virtual Box
+can be downloaded from https://www.virtualbox.org, Vagrant can be downloaded
+from https://www.vagrantup.com. Virtual Box has a beta mode for supporting
+M1/M2 Mac Arm computers.
+
