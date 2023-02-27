@@ -1,6 +1,9 @@
 # Running WSPEEDI on a shared cluster
 
-Learn how to configure the wspeedi WRF wrapper in Singularity.
+Learn how to configure the wspeedi WRF wrapper in Singularity. This allows
+the WSPEEDI tomcat web interface to execute on a Slurm cluster so that
+multiple setups can be executed and a farm of compute nodes can
+be leveraged.
 
 ## Introduction
 
@@ -20,4 +23,8 @@ the web interface driven tool in concert with a shared cluster Slurm scheduler.
 
 ## Steps
 
- 1. builidng the Singularity container.
+ 1. building the Singularity container.
+
+ 2. configuring the container on our cluster
+
+ 3. accessing the container in a Slurm job usinf an ssh tunnel
