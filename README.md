@@ -3,7 +3,16 @@
 Learn how to configure the wspeedi WRF wrapper in Singularity. This allows
 the WSPEEDI tomcat web interface to execute on a Slurm cluster so that
 multiple setups can be executed and a farm of compute nodes can
-be leveraged.
+be leveraged. 
+
+The WSPEEDI tool has a number of features that make it
+challenging to use in a traditional style on a Slurm cluster. 
+These mainly center on the integration of a custom Apache Tomcat based web 
+server ( https://tomcat.apache.org ) with WRF applications. 
+The installation of this integraation assumes privileged
+root access, which is not practical on a shared cluster system.
+Singularity allows a quasi-prviliged installtion to be 
+employed, but without compromising cluster security.
 
 ## Introduction
 

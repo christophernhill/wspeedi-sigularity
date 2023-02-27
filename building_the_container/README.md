@@ -20,4 +20,8 @@ The official Singularity product reference documentation is available
 at https://docs.sylabs.io/guides/latest/user-guide/.
 
 Here we focus on the specific application of these tools to getting WSPEEDI to work on
-a shared cluster. For this we start from a Singularity definition file 
+a shared cluster. For this we start from a so-called Singularity definition file 
+that specifies a virtual configuration for a Singularity container image.
+From this definition we can build a container image that can be used on our Slurm cluster.
+The [definition file](./wspeedi.def) describes what software needs to be installed
+into the container image.
