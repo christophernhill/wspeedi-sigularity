@@ -16,6 +16,8 @@ M1/M2 Mac Arm computers.
 The Carpentries training organization ( https://carpentries.org ) has a draft set of
 educational material that provides a hands-on set of lessons in the workings
 of Singularity https://carpentries-incubator.github.io/singularity-introduction/index.html.
+The official Singularity product reference documentation is available 
+at https://docs.sylabs.io/guides/latest/user-guide/.
 
 Here we focus on the specific application of these tools to getting WSPEEDI to work on
-a shared cluster.
+a shared cluster. For this we start from a Singularity definition file 

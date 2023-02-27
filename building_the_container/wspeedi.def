@@ -1,0 +1,28 @@
+Bootstrap: library
+From: centos:7
+
+%setup
+   mkdir ${SINGULARITY_ROOTFS}/wspeedi_install
+
+%files
+   /vagrant/WPS-4.1.tar.gz /wspeedi_install
+   /vagrant/WRF-4.1.3.tar.gz /wspeedi_install
+   /vagrant/wspeedi-db_package-v1.1.4.tar.gz /wspeedi_install
+   /vagrant/geog_high_res_mandatory.tar.gz /wspeedi_install
+   /vagrant/install.sh /wspeedi_install
+   /vagrant/plist-names.txt /wspeedi_install
+
+%post
+   yum -y install epel-release
+   yum -y update
+   yum -y install screen
+   yum -y install $(cat /wspeedi_install/plist-names.txt)
+
+   (cd /wspeedi_install ; tar -xvf wspeedi-db_package-v1.1.4.tar.gz )
+   (cd /wspeedi_install/wspeedi-db_package/;
+    mv ../WRF-4.1.3.tar.gz .;
+    mv ../WPS-4.1.tar.gz   .;
+    mv ../geog_high_res_mandatory.tar.gz .;
+    cp ../install.sh .)
+   (cd /wspeedi_install/wspeedi-db_package/; ./install.sh )
+
