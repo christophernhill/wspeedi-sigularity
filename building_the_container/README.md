@@ -52,16 +52,27 @@ In the end, building the container amounts to executing a series of commands tha
 the tools Vgrant and Singularity and operate on the [wspeedi.def](./wspeedi.def) defintiion 
 file. 
 
+### Part 1 Vagrant and virtual box configuration pre-step
+
+A pre-step for using singularity is a Linux environment providing prvileged root access. The steps
+in this seciton arr a widely used approach for creating that environment. There are not needed
+if you already have access to a suitable environment. In this pre-step the toola Vagrant and Virtual Box are
+used.
+
 The Vagrant tool is used to provide a linux Virtual Machine that supports root privileges for our
 account. This meets a requirement for building a container, although other approaches a possible.
 The Vagrant web site has details on how to work with Vagrant to run a virtual machine. Here we provide a short
 summary.
 
-#### If needed, download and install Virtual Box and Vagrant
-The websites for these two products have instructions that should be followed. For a MacOS system
+#### 1. If needed, download and install Virtual Box and Vagrant
+The websites for these two products have instructions that should be followed. 
+For a MacOS system, for example,
 the relevant installation files are
 ```
-$ wget https://download.virtualbox.org/virtualbox/7.0.6/VirtualBox-7.0.6-155176-OSX.dmg
-
+wget https://download.virtualbox.org/virtualbox/7.0.6/VirtualBox-7.0.6-155176-OSX.dmg
+brew install hashicorp/tap/hashicorp-vagrant
 ```
+Note: the Vagrant MacOS installation uses the homebrew ( https://brew.sh ) package system.
+
+#### 2. Lauch a Vagrant virtual machine and connect to it
 
