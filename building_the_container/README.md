@@ -84,3 +84,54 @@ Note: the Vagrant MacOS installation uses the homebrew ( https://brew.sh ) packa
 
 #### 2. Lauch a Vagrant virtual machine and connect to it
 
+To launch a Vagrant virtual machine we first set two environment variables that control
+where Vagrant and Virtual Box store their working information. This is not strictly needed, 
+but it helps manage disk usage associated with this workflow. The two environment variables 
+are
+
+```
+VAGRANT_DOTFILE_PATH
+VAGRANT_HOME
+```
+
+The `VAGRANT_HOME` directory path is the location where large image files associated with
+using Vagrant and Virtual Box are stored. The `VAGRANT_DOTFILE_PATH` directory is where
+various bookeeping files are stored. Setting these variables to a project specific location helps
+clean-up of potentially large temporary files.
+
+The next step to using Vargrant/Virtual Box involves downloading an image file for the
+approapriate operating system image, in this case CentOS/7. The command for this is
+
+```
+vagrant box add centos/7
+```
+the machine can then be launched and access using the commands 
+```
+vagrant init
+vagrant up
+vagrant ssh
+```
+
+```
+  555  vagrant box add centos/7
+  556  vagrant init
+  560  vagrant up
+  561  vagrant ssh
+  564  vagrant ssh
+  567  vagrant ssh
+  569  vagrant reload
+  570  vagrant ssh
+  572  vagrant ssh
+  576  vagrant scp :/vagrant/'WRF*' .
+  577  vagrant scp :/vagrant/'WPS*' .
+  580  vagrant plugin install vagrant-disksize
+  582  vagrant halt
+  583  vagrant up
+  584  vagrant ssh
+  585  vagrant help
+  587  history | grep vagrant
+
+export VAGRANT_DOTFILE_PATH=/Users/chrishill/projects/snow_tickets/ali_ayoub_wspeedi/.vagrant
+export VAGRANT_HOME=/Users/chrishill/projects/snow_tickets/ali_ayoub_wspeedi/.vagrant.d
+```
+
