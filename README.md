@@ -36,7 +36,7 @@ the web interface driven tool in concert with a shared cluster Slurm scheduler.
 
  2. configuring the container on our cluster
 
- 3. accessing the container in a Slurm job usinf an ssh tunnel
+ 3. accessing the container in a Slurm job using an ssh tunnel
 
 ## Background material
 
