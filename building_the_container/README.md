@@ -1,11 +1,17 @@
 # Building the Singularity container
 
-Building Singulairty containers is a slightly convoluted process. 
+Building Singulairty containers can be a slightly convoluted process at
+the moment.
 For cases where it is warranted the process is helpful, but
 it does involve a number of steps. 
+Here we document the most common process that should be compatible
+with most clusters. Recent improvements in the Linux kernel mean that
+on some systems root prvileges are no longer needed. This simplifies the 
+container building process. The simplified process is described after the more
+common, and slightly more involved, process.
 
-The process requires using a root privileged session on a Linux systems.
-A common approach is to use the tools, Vagrant and Virtual Box, that
+The most common process for container building requires using a root privileged session 
+on a Linux system. A widely used approach is to use the tools, Vagrant and Virtual Box, that
 togethr can provide one systematic recipe for building containers.
 
 Both tools are freely availble downloads for x86 computers. Virtual Box
@@ -55,9 +61,11 @@ file.
 ### Part 1 Vagrant and virtual box configuration pre-step
 
 A pre-step for using singularity is a Linux environment providing prvileged root access. The steps
-in this seciton arr a widely used approach for creating that environment. There are not needed
-if you already have access to a suitable environment. In this pre-step the toola Vagrant and Virtual Box are
-used.
+in this seciton are a widely used approach for creating that environment. There are not needed
+if you already have access to a suitable environment. The steps are also not needed on a more 
+recent Linux system which supports the Apptainer/Singularity standards for building containers
+without a privileged account. Rocky 8 Linux systms support these standards by default.
+In this pre-step the toola Vagrant and Virtual Box are used.
 
 The Vagrant tool is used to provide a linux Virtual Machine that supports root privileges for our
 account. This meets a requirement for building a container, although other approaches a possible.
