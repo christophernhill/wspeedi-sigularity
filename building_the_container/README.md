@@ -175,3 +175,37 @@ These features can be enabled by modifying the file called `Vagrantfile` that is
   vagrant up
   vagrant ssh
   ```
+
+* To finish configuration the formatted disk within the virtual machine needs to be _resized_. Within the virtual machine running the command
+  ```
+  $ lsblk
+  [vagrant@localhost ~]$ lsblk
+  NAME   MAJ:MIN RM  SIZE RO TYPE MOUNTPOINT
+  sda      8:0    0  500G  0 disk 
+  └─sda1   8:1    0   40G  0 part /
+
+  ```
+  shows that the virtual machine has a disk that is now 500GB in size, but that the formatted partition `sda1` that is   available is still the default 40GB. To increase the partition size use the following commands within the virtual machine
+ 
+  ```
+  sudo yum install -y e2fsprogs lvm2
+  sudo yum install cloud-utils-growpart gdisk -y
+  sudo growpart /dev/sda 1
+  sudo xfs_growfs -d /dev/sda1
+  ```
+  
+  after running these commands the `lsblk` command should show
+   ```
+   [vagrant@localhost ~]$ lsblk
+   NAME   MAJ:MIN RM  SIZE RO TYPE MOUNTPOINT
+   sda      8:0    0  500G  0 disk 
+   └─sda1   8:1    0  500G  0 part /
+   ```
+   
+At this point the virtual machine has a bas configuration for use to build an WSPEEDI singularity image.
+
+
+
+
+
+
