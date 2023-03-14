@@ -175,7 +175,3 @@ These features can be enabled by modifying the file called `Vagrantfile` that is
   vagrant up
   vagrant ssh
   ```
-
-
-export VAGRANT_HOME=/Users/chrishill/projects/snow_tickets/ali_ayoub_wspeedi/.vagrant.d
-`
