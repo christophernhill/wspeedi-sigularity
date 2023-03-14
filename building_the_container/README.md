@@ -54,11 +54,13 @@ problems that may arise.
 
 ## Commands to build
 
-In the end, building the container amounts to executing a series of commands that utilize
+In the end, building the container amounts to executing a, quite involved, series of commands that utilize
 the tools Vagrant and Singularity and operate on the [wspeedi.def](./wspeedi.def) definition 
 file. 
 
-The first set of steps involves configurating a Vagrant with Virtual Box virtual machine. They are described [here](/building_the_container/configuring_a_vagrant_virtual_machine/README.md).
+  1. The first set of steps involves configurating a Vagrant with Virtual Box virtual machine. They are described [here](/building_the_container/configuring_a_vagrant_virtual_machine/README.md).
+
+  2. Once a virtual machine is available the next step is to install Singularity on the virtual machine.
 
 
 
