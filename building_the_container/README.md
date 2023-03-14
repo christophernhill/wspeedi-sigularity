@@ -149,10 +149,14 @@ machine. Thist change involves inserting the line
 ```
 config.disksize.size = '500GB'
 ```
-directly after an existing line, that reads `  config.vm.box = "centos/7"`.
-
-
-
+directly after an existing line, that reads `  config.vm.box = "centos/7"`. In some cases one other change
+may be needed. The default `Vagrantfile` has a commented out line that reads
+```
+#   config.vm.network "private_network", ip: "192.168.33.10"
+```
+for local testing of the Sigularity build of WSPEEDI it is useful to uncommnt this line. On some systems
+the network address `192.168.33.10` may already be in use. In this case the address should be changed to an
+unused address, for example `192.168.33.23`.
 
 
 
