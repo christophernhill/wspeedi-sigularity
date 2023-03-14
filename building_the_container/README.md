@@ -142,7 +142,15 @@ the assignment `vb.memory` needs to be changed to read.
       vb.memory = "8192"
 `
 in the default `Vagrantfile` this line may be commented out using a `#` at the beginning of the line
-which needs to be deleted.
+which needs to be deleted. The Ruby language loop bracketing the `vb.memory` should also be uncommented. These are
+two lines that read
+```
+  config.vm.provider "virtualbox" do |vb|
+```
+and
+```
+  end
+```
 
 The file `Vagrantfile` also needs editing to allocate a larger virtual disk to the virtual
 machine. Thist change involves inserting the line 
