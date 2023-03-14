@@ -58,8 +58,7 @@ In the end, building the container amounts to executing a series of commands tha
 the tools Vagrant and Singularity and operate on the [wspeedi.def](./wspeedi.def) definition 
 file. 
 
-The first set of steps involves configurating a Vagrant with Virtual Box virtual machine. They are described [here](./building_the_container/configuring_a_vagrant_virtual_machine
-/README.md).
+The first set of steps involves configurating a Vagrant with Virtual Box virtual machine. They are described [here](/building_the_container/configuring_a_vagrant_virtual_machine/README.md).
 
 
 
