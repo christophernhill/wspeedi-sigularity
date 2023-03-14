@@ -119,7 +119,7 @@ From that shell privileged access can be activated with the command `sudo bash`.
 access is the current approach for building Singularity container for widely used 
 Linux cluster environments like CentOS.
 
-##### Customizing the virtual machine for this project
+##### 2.1 Customizing the virtual machine for this project
 
 The preceeding commands will launch the machine in a default configuration. For building a WSPEEDI 
 container the Vagrant/Virtual Box virtual machine needs a larger default memory and disk size. Enabling copying files to
