@@ -205,8 +205,7 @@ These features can be enabled by modifying the file called `Vagrantfile` that is
    └─sda1   8:1    0  500G  0 part /
    ```
    
-At this point the virtual machine has a bas configuration for use to build an WSPEEDI singularity image - WELL DONE! Feel free to have a coffee break. 
-
+At this point the virtual machine has a bas configuration for use to build an WSPEEDI singularity image.
 
 
 
