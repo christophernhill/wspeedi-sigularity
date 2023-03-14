@@ -110,7 +110,7 @@ when run this command prompts for the virtual machine provider to use. In this e
 
 The machine can then be launched and accessed using the commands 
 ```
-vagrant init
+vagrant init centos/7
 vagrant up
 vagrant ssh
 ```
