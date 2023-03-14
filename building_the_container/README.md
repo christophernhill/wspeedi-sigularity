@@ -162,25 +162,12 @@ already in use, between `10` and `254`.
 
 
 ```
-  555  vagrant box add centos/7
-  556  vagrant init
-  560  vagrant up
-  561  vagrant ssh
-  564  vagrant ssh
-  567  vagrant ssh
-  569  vagrant reload
-  570  vagrant ssh
-  572  vagrant ssh
-  576  vagrant scp :/vagrant/'WRF*' .
-  577  vagrant scp :/vagrant/'WPS*' .
-  580  vagrant plugin install vagrant-disksize
-  582  vagrant halt
-  583  vagrant up
-  584  vagrant ssh
-  585  vagrant help
-  587  history | grep vagrant
+vagrant halt
+vagrant up
+vagrant ssh
+```
 
-export VAGRANT_DOTFILE_PATH=/Users/chrishill/projects/snow_tickets/ali_ayoub_wspeedi/.vagrant
+
 export VAGRANT_HOME=/Users/chrishill/projects/snow_tickets/ali_ayoub_wspeedi/.vagrant.d
 ```
 
