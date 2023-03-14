@@ -179,7 +179,10 @@ These features can be enabled by modifying the file called `Vagrantfile` that is
 * To finish configuration the formatted disk within the virtual machine needs to be _resized_. Within the virtual machine running the command
   ```
   $ lsblk
-  [vagrant@localhost ~]$ lsblk
+  ```
+  this should show the following output
+  ```
+  [vagrant@localhost]$ lsblk
   NAME   MAJ:MIN RM  SIZE RO TYPE MOUNTPOINT
   sda      8:0    0  500G  0 disk 
   └─sda1   8:1    0   40G  0 part /
@@ -202,7 +205,7 @@ These features can be enabled by modifying the file called `Vagrantfile` that is
    └─sda1   8:1    0  500G  0 part /
    ```
    
-At this point the virtual machine has a bas configuration for use to build an WSPEEDI singularity image.
+At this point the virtual machine has a bas configuration for use to build an WSPEEDI singularity image - WELL DONE! Feel free to have a coffee break. 
 
 
 
