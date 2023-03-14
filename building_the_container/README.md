@@ -117,7 +117,7 @@ vagrant ssh
 The final command `vagrant ssh` logs in to a terminal shell on the virtual machine.
 From that shell privileged access can be activated with the command `sudo bash`. Privileged
 access is the current approach for building Singularity container for widely used 
-Linux cluster environments like CentOS.
+Linux cluster environments like CentOS. To exit the terminal session use the command `exit`.
 
 ##### 2.1 Customizing the virtual machine for this project
 
