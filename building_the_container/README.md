@@ -141,6 +141,15 @@ the assignment `vb.memory` needs to be changed to read.
 `
       vb.memory = "8192"
 `
+in the default `Vagrantfile` this line may be commented out using a `#` at the beginning of the line
+which needs to be deleted.
+
+The file `Vagrantfile` also needs editing to allocate a larger virtual disk to the virtual
+machine. Thist change involves inserting the line 
+```
+config.disksize.size = '500GB'
+```
+directly after an existing line, that reads `  config.vm.box = "centos/7"`.
 
 
 
