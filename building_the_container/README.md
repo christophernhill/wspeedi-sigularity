@@ -105,7 +105,10 @@ approapriate operating system image, in this case CentOS/7. The command for this
 ```
 vagrant box add centos/7
 ```
-the machine can then be launched and accessed using the commands 
+when run this command prompts for the virtual machine provider to use. In this example the `virtualbox` prvoder is used.
+
+
+The machine can then be launched and accessed using the commands 
 ```
 vagrant init
 vagrant up
