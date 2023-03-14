@@ -14,3 +14,20 @@ and then installing a small number of other software packages as well as follows
    ```
    sudo yum -y install wget 
    ```
+
+  2. install the Go language compiler (Sigularity is implemented in Go) and disconnect from virtual machine
+
+  ```
+   mkdir singularity-install
+   cd singularity-install/
+   wget https://go.dev/dl/go1.20.1.linux-amd64.tar.gz
+   sudo rm -rf /usr/local/go && sudo tar -C /usr/local -xzf go1.20.1.linux-amd64.tar.gz
+   echo "pathmunge /usr/local/go/bin after" | sudo tee /etc/profile.d/golang.sh 
+   exit
+  ```
+  
+  3. install singularity
+  
+  ```
+  
+  ```
