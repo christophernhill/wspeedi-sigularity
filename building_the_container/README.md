@@ -156,7 +156,8 @@ may be needed. The default `Vagrantfile` has a commented out line that reads
 ```
 for local testing of the Sigularity build of WSPEEDI it is useful to uncommnt this line. On some systems
 the network address `192.168.33.10` may already be in use. In this case the address should be changed to an
-unused address, for example `192.168.33.23`.
+unused address, for example `192.168.33.23`. The final digits in this address can be any number, that is not
+already in use, between `10` and `254`.
 
 
 
