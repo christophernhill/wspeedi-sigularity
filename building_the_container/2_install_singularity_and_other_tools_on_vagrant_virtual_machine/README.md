@@ -57,7 +57,23 @@ and then installing a small number of other software packages as well as follows
   mkdir singularity-install
   cd singularity-install
   git clone https://github.com/sylabs/singularity.git --recurse-submodules
+  cd singularity
+  git checkout release-3.11
+  ./mconfig --prefix=/usr/local/singularity-ce-3.11.0
+  cd builddir
+  make
+  sudo make install
+  exit
+  ```
   
+  4. reconnect to virtual machine and check that singularity is functioning
+
+  ```
+  vagrant ssh
+  ```
+  
+  ```
+  /usr/local/singularity-ce-3.11.0/bin/singularity run library://godlovedc/funny/lolcow
   ```
 
 
