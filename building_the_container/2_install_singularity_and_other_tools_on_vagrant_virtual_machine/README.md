@@ -26,37 +26,24 @@ and then installing a small number of other software packages as well as follows
    exit
   ```
   
-  3. reconnect to virtual machine and install other packages needed to use singularity
+  3. reconnect to virtual machine and install other packages needed to install and use singularity
   
   ```
   vagrant ssh
   ```
   
   ```
-
   sudo yum -y install gcc gcc-c++
   sudo yum -y install seccomp libseccomp libseccomp-devel
   sudo yum -y install glib2-devel
   sudo yum -y install epel-release
   sudo yum -y update
   sudo yum -y install htop
-   50  yum install libseccomp
-   51  yum install libseccomp-devel
-   52  ./mconfig --prefix=/usr/local/singularity-ce-3.11.0
-   53  yum install glib2-devel
-   54  ./mconfig --prefix=/usr/local/singularity-ce-3.11.0
-   55  cd builddir/
-   56  make
-   57  bg
-   58  w
-   59  ps auxxww
-   60  htop
-   61  yum install htop
-   62  yum install epel-release
-   63  yum update'
-   64  yum update
-   65  yum install htop
-
+  sudo yum -y install git
+  sudo yum -y install mksquashfs
+  sudo yum -y install squashfs
+  sudo yum -y install squashfs-tools
+  exit
   ```
   
   3. reconnect to virtual machine and install singularity
@@ -66,12 +53,17 @@ and then installing a small number of other software packages as well as follows
   ```
   
   ```
-  sudo yum -y install git
-  sudo yum -y install mksquashfs
-  sudo yum -y install squashfs
-  sudo yum -y install squashfs-tools
+  cd singularity-install/
   mkdir singularity-install
   cd singularity-install
   git clone https://github.com/sylabs/singularity.git --recurse-submodules
   
   ```
+
+
+
+
+
+
+
+
