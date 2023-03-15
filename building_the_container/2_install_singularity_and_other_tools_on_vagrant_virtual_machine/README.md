@@ -51,8 +51,6 @@ and then installing a small number of other software packages as well as follows
   ```
   
   ```
-  cd singularity-install/
-  mkdir singularity-install
   cd singularity-install
   git clone https://github.com/sylabs/singularity.git --recurse-submodules
   cd singularity
