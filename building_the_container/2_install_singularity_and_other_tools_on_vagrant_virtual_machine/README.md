@@ -40,8 +40,6 @@ and then installing a small number of other software packages as well as follows
   sudo yum -y update
   sudo yum -y install htop
   sudo yum -y install git
-  sudo yum -y install mksquashfs
-  sudo yum -y install squashfs
   sudo yum -y install squashfs-tools
   exit
   ```
