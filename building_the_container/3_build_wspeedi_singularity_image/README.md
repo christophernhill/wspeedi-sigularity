@@ -42,17 +42,19 @@ The `wspeedi.sif` image file can be used to launch a WSPEEDI session in a contai
 it can be used for a WSPEEDI session a few more steps are needed to setup override locations that
 WSPEEDI need to have read-write permissions. The steps involve a few more commands:
 
-  1. Create a account with the same UID and GID as target cluster account and copy image file across. Here we
+  1. Create a proxy account with the same UID and GID as target cluster account and copy image file across. Here we
   are using the username `cnh` with UID of `1006` and GID of `1006`. This should be cutomized for the
-  target acco
+  target account
   ```
   sudo groupadd --gid 1006 cnh
   sudo useradd --uid 1006 -g cnh cnh
   sudo cp wspeedi.sif /home/cnh
   ```
 
-  1. Create location for holding writable overrides of key directories 
+  1. Under the target user proxy account create location for holding writable overrides of key directories. Here again the use name `cnh` should be cutomized to match the actual target account.
   ```
+  sudo bash
+  su -l cnh
   mkdir bmnts
   ```
 
