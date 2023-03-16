@@ -42,6 +42,15 @@ The `wspeedi.sif` image file can be used to launch a WSPEEDI session in a contai
 it can be used for a WSPEEDI session a few more steps are needed to setup override locations that
 WSPEEDI need to have read-write permissions. The steps involve a few more commands:
 
+  1. Create a account with the same UID and GID as target cluster account and copy image file across. Here we
+  are using the username `cnh` with UID of `1006` and GID of `1006`. This should be cutomized for the
+  target acco
+  ```
+  sudo groupadd --gid 1006 cnh
+  sudo useradd --uid 1006 -g cnh cnh
+  sudo cp wspeedi.sif /home/cnh
+  ```
+
   1. Create location for holding writable overrides of key directories 
   ```
   mkdir bmnts
@@ -50,7 +59,7 @@ WSPEEDI need to have read-write permissions. The steps involve a few more comman
   2. Launch a terminal in the container
  
   ```
-  sudo /usr/local/singularity-ce-3.11.0/bin/singularity shell  wspeedi.sif 
+  /usr/local/singularity-ce-3.11.0/bin/singularity shell  wspeedi.sif 
   ```
   (the shell prompt should change to read `Singularity> ` ).
 
@@ -62,7 +71,7 @@ WSPEEDI need to have read-write permissions. The steps involve a few more comman
   ```
   (the shell prompt should revert to `[vagrant@localhost ~]$ ` ).
   ```
-  sudo cp /root/var_lib_tomcats.tar .
+  cp var_lib_tomcats.tar .
   (cd bmnts; tar -xvf ~/var_lib_tomcats.tar )
   ```
   
