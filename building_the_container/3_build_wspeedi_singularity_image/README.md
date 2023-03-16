@@ -48,3 +48,21 @@ WSPEEDI need to have read-write permissions. The steps involve a few more comman
   sudo /usr/local/singularity-ce-3.11.0/bin/singularity shell  wspeedi.sif 
 
   ```
+  the shell prompt should change to read `Singularity> `.
+
+  2. Create duplicates of key directory trees
+  ```
+  cd /var/lib/
+  tar -cvf ~/var_lib_tomcats.tar tomcats
+  exit
+  ```
+  the shell prompt should revert to `[vagrant@localhost ~]$`
+  ```
+  
+  
+  
+  
+  
+  
+  
+  
