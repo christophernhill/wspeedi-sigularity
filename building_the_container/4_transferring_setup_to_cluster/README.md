@@ -13,7 +13,7 @@ exit
 sudo cp /home/cnh/to_cluster.tar .
 exit
 vagrant scp :to_cluster.tar to_cluster.tar
-scp to_cluster.tar cnh@eofe8.mit.edu:/nfs/cnhlab001/cnh/projects
+scp to_cluster.tar ACCOUNT@CLUSTER_ADDRESS:CLUSTER_DIRECTORY
 ```
 
 On cluster
