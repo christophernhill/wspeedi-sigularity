@@ -62,6 +62,7 @@ WSPEEDI need to have read-write permissions. The steps involve a few more comman
   ```
   (the shell prompt should revert to `[vagrant@localhost ~]$ ` ).
   ```
+  sudo cp /root/var_lib_tomcats.tar .
   (cd bmnts; tar -xvf ~/var_lib_tomcats.tar )
   ```
   
