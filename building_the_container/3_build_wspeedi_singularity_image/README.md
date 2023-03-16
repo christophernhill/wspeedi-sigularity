@@ -9,11 +9,11 @@ The smaller configuration files ( `wspeedi.def`, `install.sh` and `plist-names.t
 the WSPEEDI developers. TOtransfer the files use the following commands.
 
 ```
-vagrant scp WPS-4.1.tar.gz :WPS-4.1.tar.gz 
-vagrant scp WRF-4.1.3.tar.gz :WRF-4.1.3.tar.gz 
-vagrant scp geog_high_res_mandatory.tar.gz :geog_high_res_mandatory.tar.gz 
-vagrant scp wspeedi-db_package-v1.1.4.tar.gz :wspeedi-db_package-v1.1.4.tar.gz 
-vagrant scp plist-names.txt :plist-names.txt 
-vagrant scp install.sh :install.sh 
-vagrant scp wspeedi.spec :wspeedi.spec 
+vagrant scp WPS-4.1.tar.gz :/vagrant/WPS-4.1.tar.gz 
+vagrant scp WRF-4.1.3.tar.gz :/vagrant/WRF-4.1.3.tar.gz 
+vagrant scp geog_high_res_mandatory.tar.gz :/vagrant/geog_high_res_mandatory.tar.gz 
+vagrant scp wspeedi-db_package-v1.1.4.tar.gz :/vagrant/wspeedi-db_package-v1.1.4.tar.gz 
+vagrant scp plist-names.txt :/vagrant/plist-names.txt 
+vagrant scp install.sh :/vagrant/install.sh 
+vagrant scp wspeedi.spec :/vagrant/wspeedi.spec 
 ```
