@@ -42,14 +42,19 @@ The `wspeedi.sif` image file can be used to launch a WSPEEDI session in a contai
 it can be used for a WSPEEDI session a few more steps are needed to setup override locations that
 WSPEEDI need to have read-write permissions. The steps involve a few more commands:
 
-  1. Launch a terminal in the container
+  1. Create location for holding writable overrides of key directories 
+  ```
+  mkdir bmnts
+  ```
+
+  2. Launch a terminal in the container
  
   ```
   sudo /usr/local/singularity-ce-3.11.0/bin/singularity shell  wspeedi.sif 
   ```
   (the shell prompt should change to read `Singularity> ` ).
 
-  2. Create duplicates of key directory trees
+  3. Create wriitable override duplicate of the `/var/lib/tomcats` directory tree.
   ```
   cd /var/lib/
   tar -cvf ~/var_lib_tomcats.tar tomcats
@@ -57,6 +62,7 @@ WSPEEDI need to have read-write permissions. The steps involve a few more comman
   ```
   (the shell prompt should revert to `[vagrant@localhost ~]$ ` ).
   ```
+  (cd bmnts; tar -xvf ~/var_lib_tomcats.tar )
   ```
   
   
