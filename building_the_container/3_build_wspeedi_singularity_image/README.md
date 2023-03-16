@@ -57,6 +57,15 @@ WSPEEDI need to have read-write permissions. The steps involve a few more comman
   ```
   the shell prompt should revert to `[vagrant@localhost ~]$`
   ```
+  ```
+  
+  
+  
+  
+  
+  
+  
+  
   
   
   
