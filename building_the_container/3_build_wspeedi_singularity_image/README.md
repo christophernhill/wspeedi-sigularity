@@ -58,14 +58,14 @@ WSPEEDI need to have read-write permissions. The steps involve a few more comman
   mkdir bmnts
   ```
 
-  2. Launch a terminal in the container
+  1. Launch a terminal in the container
  
   ```
   /usr/local/singularity-ce-3.11.0/bin/singularity shell  wspeedi.sif 
   ```
   (the shell prompt should change to read `Singularity> ` ).
 
-  3. Create wriitable override duplicate of the `/var/lib/tomcats` directory tree.
+  1. Create wriitable override duplicate of the `/var/lib/tomcats` directory tree.
   ```
   cd /var/lib/
   tar -cvf ~/var_lib_tomcats.tar tomcats
