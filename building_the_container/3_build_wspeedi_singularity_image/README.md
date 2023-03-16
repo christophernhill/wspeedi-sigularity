@@ -86,7 +86,18 @@ WSPEEDI need to have read-write permissions. The steps involve a few more comman
   mkdir -p bmnts/home
   (cd bmnts/home; tar -xvf ~/home_wspeedi.tar )
   ```
-
+  6. Customize default language setting to US. This is done by editing the line
+  ```
+  SD_Lang=JP
+  ```
+  to read
+  ```
+  SD_Lang=US
+  ```
+  in the file
+  ```
+  bmnts/home/wspeedi/.wdb/wdb_user.conf
+  ```
 
   Testing....
   
