@@ -10,10 +10,10 @@ the WSPEEDI developers. TOtransfer the files use the following commands.
 
 ```
 vagrant scp :WPS-4.1.tar.gz WPS-4.1.tar.gz
-vagrant scp :
-vagrant scp :
-vagrant scp :
-vagrant scp :
-vagrant scp :
-vagrant scp :
+vagrant scp :WRF-4.1.3.tar.gz WRF-4.1.3.tar.gz
+vagrant scp :geog_high_res_mandatory.tar.gz geog_high_res_mandatory.tar.gz
+vagrant scp :wspeedi-db_package-v1.1.4.tar.gz wspeedi-db_package-v1.1.4.tar.gz
+vagrant scp :plist-names.txt plist-names.txt
+vagrant scp :install.sh install.sh
+vagrant scp :wspeedi.spec wspeedi.spec
 ```
