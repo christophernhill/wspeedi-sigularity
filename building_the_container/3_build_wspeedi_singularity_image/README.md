@@ -103,7 +103,8 @@ WSPEEDI need to have read-write permissions. The steps involve a few more comman
   
   ```
   /usr/local/singularity-ce-3.11.0/bin/singularity shell \
-        --bind bmnts/var/lib/tomcats:/var/lib/tomcats wspeedi.sif
+       --bind bmnts/var/lib/tomcats:/var/lib/tomcats     \
+       --bind bmnts/home/wspeedi:/home/wspeedi wspeedi.sif
   ```
   
   
