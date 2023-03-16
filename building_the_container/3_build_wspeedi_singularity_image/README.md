@@ -22,5 +22,29 @@ Once files are transferred the vagrant virtula machine can be used to generate a
 
 ```
 vagrant ssh
-sudo /usr/local/singularity-ce-3.11.0/bin/singularity build  myfoo.sif wspeedi.spec
+sudo /usr/local/singularity-ce-3.11.0/bin/singularity build  wspeedi.sif wspeedi.spec
 ```
+
+This command will take some time to complete. At the end it should produce a Singularity image file called `wspeedi.sif`. The final messages printed
+to the terminal during the build should read
+```
+  :
+  :
+Complete!
+Compiling WRF was successfully done.
+ungrib/src/rd_grib2.F at 772 :"& gfld%ipdtmpl(12) .eq. 15 .or." add
+Compiling WPS was successfully done.
+INFO:    Creating SIF file...
+INFO:    Build complete: wspeedi.sif
+```
+
+The `wspeedi.sif` image file can be used to launch a WSPEEDI session in a container. However, the image file is entirely read-only, so before
+it can be used for a WSPEEDI session a few more steps are needed to setup override locations that
+WSPEEDI need to have read-write permissions. The steps involve a few more commands:
+
+  1. Launch a terminal in the container
+ 
+  ```
+  sudo /usr/local/singularity-ce-3.11.0/bin/singularity shell  wspeedi.sif 
+
+  ```
