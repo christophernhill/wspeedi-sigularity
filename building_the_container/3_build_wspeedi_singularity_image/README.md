@@ -77,7 +77,12 @@ WSPEEDI need to have read-write permissions. The steps involve a few more comman
   (cd bmnts/var/lib; tar -xvf ~/var_lib_tomcats.tar )
   ```
   
+  Testing....
   
+  ```
+  /usr/local/singularity-ce-3.11.0/bin/singularity shell \
+        --bind bmnts/var/lib/tomcats:/var/lib/tomcats wspeedi.sif
+  ```
   
   
   
