@@ -46,7 +46,6 @@ WSPEEDI need to have read-write permissions. The steps involve a few more comman
  
   ```
   sudo /usr/local/singularity-ce-3.11.0/bin/singularity shell  wspeedi.sif 
-
   ```
   the shell prompt should change to read `Singularity> `.
 
