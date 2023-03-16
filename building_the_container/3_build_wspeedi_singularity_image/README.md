@@ -55,7 +55,7 @@ WSPEEDI need to have read-write permissions. The steps involve a few more comman
   tar -cvf ~/var_lib_tomcats.tar tomcats
   exit
   ```
-  (the shell prompt should revert to `[vagrant@localhost ~]$`).
+  (the shell prompt should revert to `[vagrant@localhost ~]$ `).
   ```
   ```
   
