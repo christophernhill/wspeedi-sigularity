@@ -77,6 +77,17 @@ WSPEEDI need to have read-write permissions. The steps involve a few more comman
   (cd bmnts/var/lib; tar -xvf ~/var_lib_tomcats.tar )
   ```
   
+  5. Create wriitable override duplicate of the `/home/wspeedi` directory tree.
+  ```
+  /usr/local/singularity-ce-3.11.0/bin/singularity shell  wspeedi.sif 
+  cd /home
+  tar -cvf ~/home_wspeedi.tar wspeedi/
+  exit
+  mkdir -p bmnts/home
+  (cd bmnts/home; tar -xvf ~/home_wspeedi.tar )
+  ```
+
+
   Testing....
   
   ```
