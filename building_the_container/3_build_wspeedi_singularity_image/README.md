@@ -99,7 +99,9 @@ WSPEEDI need to have read-write permissions. The steps involve a few more comman
   bmnts/home/wspeedi/.wdb/wdb_user.conf
   ```
 
-  Testing....
+  
+  The configuration can now be tested by launching a container for the Sigularity image with the two
+  read-write sub-directory overrides. 
   
   ```
   /usr/local/singularity-ce-3.11.0/bin/singularity shell \
@@ -107,7 +109,18 @@ WSPEEDI need to have read-write permissions. The steps involve a few more comman
        --bind bmnts/home/wspeedi:/home/wspeedi wspeedi.sif
   ```
   
+  within this container a WSPEEDI session can be started
   
+  ```
+  . /etc/sysconfig/tomcat-wdb\@wspeedi
+  export NAME=wspeedi
+  /usr/libexec/tomcat/server start
+  ```
+  
+  a web browser on the machine hosting the vagrant session should then be able to connect to the URL
+  ```
+  http://192.168.33.11/wspeedi_db
+  ```
   
   
   
