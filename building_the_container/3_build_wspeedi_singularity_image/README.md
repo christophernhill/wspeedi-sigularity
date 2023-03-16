@@ -17,3 +17,10 @@ vagrant scp plist-names.txt :/vagrant/plist-names.txt
 vagrant scp install.sh :/vagrant/install.sh 
 vagrant scp wspeedi.spec :/vagrant/wspeedi.spec 
 ```
+
+Once files are transferred the vagrant virtula machine can be used to generate a singularity image
+
+```
+vagrant ssh
+sudo /usr/local/singularity-ce-3.11.0/bin/singularity build  myfoo.sif wspeedi.spec
+```
