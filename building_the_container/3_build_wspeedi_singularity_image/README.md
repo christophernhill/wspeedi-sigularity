@@ -51,21 +51,21 @@ WSPEEDI need to have read-write permissions. The steps involve a few more comman
   sudo cp wspeedi.sif /home/cnh
   ```
 
-  1. Under the target user proxy account create location for holding writable overrides of key directories. Here again the use name `cnh` should be cutomized to match the actual target account.
+  2. Under the target user proxy account create location for holding writable overrides of key directories. Here again the use name `cnh` should be cutomized to match the actual target account.
   ```
   sudo bash
   su -l cnh
   mkdir bmnts
   ```
 
-  1. Launch a terminal in the container
+  3. Launch a terminal in the container
  
   ```
   /usr/local/singularity-ce-3.11.0/bin/singularity shell  wspeedi.sif 
   ```
   (the shell prompt should change to read `Singularity> ` ).
 
-  1. Create wriitable override duplicate of the `/var/lib/tomcats` directory tree.
+  4. Create wriitable override duplicate of the `/var/lib/tomcats` directory tree.
   ```
   cd /var/lib/
   tar -cvf ~/var_lib_tomcats.tar tomcats
