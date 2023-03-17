@@ -11,8 +11,6 @@ SRC_DIR=`pwd`
 groupadd --gid ${END_USER_GID} ${DB_GROUP}
 useradd  --uid ${END_USER_UID} -g ${DB_GROUP} ${DB_USER}
 
-exit
-
 #yum install -y epel-release
 yum install -y "http://li.nux.ro/download/nux/dextop/el7/x86_64/nux-dextop-release-0-5.el7.nux.noarch.rpm"
 yum -y update
