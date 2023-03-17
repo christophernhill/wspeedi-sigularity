@@ -3,8 +3,8 @@
 . ./config.dat
 
 # These need to be a UID and GID for the end user on the target cluster
-END_USER_GID=1006
-END_USER_UID=1006
+END_USER_GID=219917
+END_USER_UID=219917
 
 SRC_DIR=`pwd`
 
